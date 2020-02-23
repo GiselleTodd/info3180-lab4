@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block main%}
+<h1>Uploaded Images</h1>
+{% for image in images %}
+  <ul>
+    <li><img src="{{url_for('static',filename=image)}}"></li>
+  </ul>
+{% endfor %}
+
+{% endblock %}
