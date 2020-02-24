@@ -81,9 +81,7 @@ def get_uploaded_images():
     for subdir, dirs, files in os.walk(rootdir + '/app/static/uploads'):
         for file in files:
             print(os.path.join(subdir, file))
-            if file[0] == ".":
-                pass
-            else:
+            if file.endswith('.jpg') or file.endswith('.png'):
                 filelst.append("/uploads/"+ file)
     return filelst
 

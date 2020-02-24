@@ -2,10 +2,16 @@
 
 {% block main%}
 <h1>Uploaded Images</h1>
-{% for image in images %}
-  <ul>
-    <li><img src="{{url_for('static',filename=image)}}"></li>
-  </ul>
-{% endfor %}
+<div class=row>
+  {% for image in images %}
+  <div class="column">
+    <ul>
+      <li><img src="{{url_for('static',filename=image)}}"></li>
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+
 
 {% endblock %}
